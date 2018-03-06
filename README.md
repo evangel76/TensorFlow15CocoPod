@@ -26,7 +26,11 @@
     Remove limitations for TensorFlow for iOS:
     ```
     open build_all_ios.sh into tensorflow/tensorflow/contrib/makefile
-    remove all  instances of "ANDROID_TYPE" into the iOS section of the makefile, this will remove the limitation tensorflow has on operations in iOS. Notice that it will increase dramatically the size of the library. I recommand to only do this if you need advanced features like back propagation, or CNN/RNN, and you are targetting mostly ARM64 only.
+    remove all  instances of "ANDROID_TYPE" into the iOS section of the makefile, 
+    this will remove the limitation tensorflow has on operations in iOS. 
+    Notice that it will increase dramatically the size of the library. 
+    I recommand to only do this if you need advanced features like back propagation,
+    or CNN/RNN, and you are targetting mostly ARM64 only.
    
     ```
 
