@@ -56,6 +56,7 @@
     ```
 
 * Create or add pod into your project ```Podfile```, which should look like
+Don't forget to edit "DemoApp" as your own project name, otherwise, cocopod will fail to add it to your project.
     ```
     target 'DemoApp' do
         # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
