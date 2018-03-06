@@ -63,7 +63,7 @@ Don't forget to edit "DemoApp" as your own project name, otherwise, cocopod will
         use_frameworks!
 
         # Pods for DemoApp
-        pod 'TensorflowPod', :podspec => 'https://github.com/evangel76/TensorFlow15CocoPod/blob/master/TensorflowPod.podspec'
+        pod 'TensorflowPod', :podspec => 'https://raw.githubusercontent.com/evangel76/TensorFlow15CocoPod/blob/master/TensorflowPod.podspec'
 
     end
     ```
