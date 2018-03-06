@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "11.2"
 
 
-  s.source = { :http => "https://raw.githubusercontent.com/evangel76/TensorFlow15CocoPod/master/tensorflow.tar.gz" }
+  s.source = { :http => "https://raw.githubusercontent.com/evangel76/TensorFlow15CocoPod/tensorflow.tar.gz" }
   s.preserve_paths = "include/**"
 
  
