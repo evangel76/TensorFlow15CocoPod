@@ -21,8 +21,15 @@
 * Clone TensorflowPod repository
     ```
     $ cd ~/Code
-    $ git clone https://github.com/rainbean/TensorflowPod
+    $ git clone https://github.com/evangel76/TensorFlow15CocoPod
     ```
+    Remove limitations for TensorFlow for iOS:
+    ```
+    open build_all_ios.sh into tensorflow/tensorflow/contrib/makefile
+    remove all  instances of "ANDROID_TYPE" into the iOS section of the makefile, this will remove the limitation tensorflow has on operations in iOS. Notice that it will increase dramatically the size of the library. I recommand to only do this if you need advanced features like back propagation, or CNN/RNN, and you are targetting mostly ARM64 only.
+   
+    ```
+
 
 * Compile TensorFlow 
     ```
@@ -51,7 +58,7 @@
         use_frameworks!
 
         # Pods for DemoApp
-        pod 'TensorflowPod', :podspec => 'https://raw.githubusercontent.com/rainbean/TensorflowPod/master/TensorflowPod.podspec'
+        pod 'TensorflowPod', :podspec => 'https://github.com/evangel76/TensorFlow15CocoPod/blob/master/TensorflowPod.podspec'
 
     end
     ```
@@ -69,24 +76,6 @@
 
     tensorflow::GraphDef graph;
     ...
-    ``` 
+]
 
-## Apply hotfix
 
-* Issue [#1740](https://github.com/tensorflow/models/issues/1740): No OpKernel was registered to support Op 'Switch'
-    ```
-    $ sed  -i -- '98s/$/ m(bool)/' tensorflow/core/framework/register_types.h
-    $ git diff
-        ...
-        -#define TF_CALL_bool(m)
-        +#define TF_CALL_bool(m) m(bool)
-    ```
-
-* Issue [#9476](https://github.com/tensorflow/tensorflow/issues/9476): No OpKernel was registered to support Op 'Less'
-    ```
-    $ sed  -i -- '302,430s/__ANDROID_TYPES_SLIM__/__ANDROID_TYPES_FULL__/' tensorflow/contrib/makefile/Makefile
-    $ git diff
-        ...
-        - -D__ANDROID_TYPES_SLIM__ \
-        + -D__ANDROID_TYPES_FULL__ \
-    ```
