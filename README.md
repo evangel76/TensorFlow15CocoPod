@@ -1,6 +1,6 @@
-# TensorflowPod
+# TensorflowPod1.5
 
-## Build Tensorflow for iOS on macOS
+## Build Tensorflow for iOS 11.2 on macOS
 
 * [Prerequsite] Install xcode cli tools
     ```
