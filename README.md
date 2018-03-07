@@ -1,7 +1,8 @@
 # TensorflowPod1.5
 
 ## Build Tensorflow for iOS 11.2 on macOS
-
+Only ARM64 libraries provided into the tar. The all libs are on all iOS variations, including x86 simulator for your MAC
+are here: 
 * [Prerequsite] Install xcode cli tools
     ```
     $ xcode-select --install
