@@ -2,7 +2,8 @@
 
 ## Build Tensorflow for iOS 11.2 on macOS
 Only ARM64 libraries provided into the tar. The all libs are on all iOS variations, including x86 simulator for your MAC
-are here: 
+are here: https://www.dropbox.com/s/9upcgpwzquber4p/tensorflow.tar.gz?dl=0
+(gitnub does not allow such large libraries)
 * [Prerequsite] Install xcode cli tools
     ```
     $ xcode-select --install
